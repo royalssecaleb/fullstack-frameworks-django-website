@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+<!-- OVERDRIVE J-TYPE -->
+<div class="container overdrive-j-type-container">
+    <ol class="breadcrumb bcrumb-margins">
+        <li class="breadcrumb-item"> <a href="{% url 'index' %}"> <i class="fas fa-home fa-lg"></i> </a></li>
+        <li class="breadcrumb-item"> <a href="{% url 'products' %}"> Products </a></li>
+        <li class="breadcrumb-item"> <a href="{% url 'clutch' %}"> Clutch </a></li>
+        <li class="breadcrumb-item"> <a href="{% url 'gearbox' %}"> Gearbox </a></li>
+        <li class="breadcrumb-item"> <a href="{% url 'overdrive' %}"> Overdrive 'D' type </a></li>
+        <li class="breadcrumb-item active"> Overdrive 'J' type </li>
+
+    </ol>
+
+    <!-- Parts Heading -->
+    <h2 class="pl-4 pr-4"> Overdrive 'J' type </h2>
+    <p class="pl-4 pr-4"> From chassis no. FH60001 & FM10001 (August 1973) </p>
+    </br>
+
+    <!-- Parts Diagram(s) -->
+    <div class="row  pl-4 pr-4 text-center">
+        <div class="col-md-6 col-sm-6">
+            <img class=" img-fluid parts-diagram" data-toggle="magnify" src="{% static 'img/overdrive_j/J type overdrive, inner - late spitfire Mk4 and all 1500.gif' %}" alt="scparts">
+            <h2 class="mb-2"> Overdrive inner 'J type </h2>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <img class="img-fluid parts-diagram" data-toggle="magnify" src="{% static 'img/overdrive_j/J type overdrive, outer - late Spitfire Mk4 and all 1500.gif' %}" alt="scparts">
+            <h2 class="mb-2"> Overdrive outer'J' type </h2>
+        </div>
+    </div>
+
+    <!-- Parts Cards -->
+    {% include 'parts_cards.html' %}
+</div>
+
+<!-- BACK TO TOP -->
+{% include 'bttop.html' %} 
+{% endblock %}

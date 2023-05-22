@@ -1,0 +1,597 @@
+/*-----------------------------------*/
+/* main.css: Add and override styles */
+/*-----------------------------------*/
+
+/*----------------------------------------------------*/
+/* https://coolors.co/3d5a80-98c1d9-e0fbfc-ee6c4d-293241
+/* Colors used                       
+/* #3d5a80 = navy purple
+/* #98c1d9 = pale cerulean
+/* #e0fbfc = light cyan
+/* #ee6c4d = light red orche
+/* #293241 = gun metal
+/*----------------------------------------------------*/
+/* Other Colours used
+/* #b22222 = firebrick
+/* #9b9797 = nobel
+/* #75bf00 = christi
+/*----------------------------------------------------*/
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: #98c1d9; /* pale cerulean */
+    padding:70px 0 0 0; /*(top,right,bottom,Left) */
+}
+
+
+/* ----- Changes to Padding for Messages ----- */ 
+
+/* iPhone 5 & 5S in portrait & landscape */
+@media (min-width: 320px) and (max-width: 568px) {
+    body { 
+     padding:100px 0 0 0; 
+}
+    
+/* ADD fixed, scrollable navbar */
+/* see https://codepen.io/ondrejsvestka/pen/BZJEpp */
+.fixed-top .navbar-collapse {
+  max-height: 300px;
+  overflow-y: auto;}    
+}
+
+/* If larger footer */
+@media (max-width: 767px) {
+    body { 
+     padding:70px 0 0 0; /*(top,right,bottom,Left) */
+    }
+    .about-container {
+     min-height: calc(100vh - 184px); /* navbar 50px, footer 134px */
+    }   
+}
+
+/* If Smaller footer */
+@media (min-width: 768px) {
+    body { 
+     padding:70px 0 0 0;
+    }
+    .about-container {
+     min-height: calc(100vh - 100px); /* navbar 50px, footer 50px */
+    }   
+}
+
+p.card-body {
+ margin :10px;
+ line-height: 15px;
+}
+
+p.card-footer {
+ margin: 0;
+ padding: 0;
+}
+
+
+
+
+/* ----- Changes to Nav Bar ----- */
+/*text colour for the link on the navbar */
+.navbar .nav-link, 
+.navbar .nav-link:hover {
+	color: white;
+	font-size: 13px; 
+}
+
+/**/
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px;
+    line-height: 20px;
+}
+
+/* CHANGE color of dropdown item when hovered over */
+.dropdown-item:hover {
+    background-color: #98c1d9; /* pale cerulean */
+    color: black;
+}
+
+/**/
+.dropdown-menu .dropdown-item {
+    line-height: 16px;
+}
+
+/**/
+.dropdown-menu.show {
+  padding: 4px;
+}
+
+/* CHANGE padding of dtopdown item */
+.dropdown-item {
+    padding: 0.25rem 0.25rem;
+}
+
+/**/
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    font-size:13px;
+    background-color: #ee6c4d;
+    color:  #ffffffd4;
+} 
+
+
+
+/* ----- Changes to Messages ------- */
+.alert {
+    border-color: #9b9797;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.alert-success {
+    background-color: #0b6d52;
+}
+
+.alert-danger {
+    background-color: #ee6c4d;
+}
+
+
+
+/* ----- Changes to Breadcrumb ----- */
+
+/* CHANGE color & font-size*/
+.breadcrumb {
+	background-color: #3d5a80; /* purple navy */
+	border: double#3d5a80; /* purple navy */;
+	font-size: 13px; 
+	list-style: none;
+}
+
+/* ADD matgins */
+.bcrumb-margins {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/* Change color */
+.breadcrumb-item > a {
+	color: rgba(255,255,255,0.5); 
+	text-decoration: none;
+}
+
+/* Change color */
+.breadcrumb-item > a:hover {
+    color: white; 
+    text-decoration: none;
+}
+
+/* Change color */
+.breadcrumb-item.active {
+    color: #ee6c4d;
+}
+
+
+
+/* ----- Changes to Header ----- */
+/* ADD background */
+.masthead {
+    width:100%; 
+    height: 100%; 
+    background: url("../img/vehicles/Triumph_Spitfire_MKIV_colors.svg") no-repeat center; 
+    background-attachment: scroll; 
+    background-size: cover; 
+   
+}
+
+.masthead img {
+    max-width: 100%;
+}
+
+/* CHANGE color */
+.bg-info {
+ background-color: #3d5a80 !important; /* pale cerulean */   
+}
+
+/* Move to botton of background image */
+.bg-tagline {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+}
+
+/* ADD background color to intro text background */
+.intro-text-background {
+  padding: 35px;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 6rem;
+  border: 1px solid #6c757d;;
+}
+
+/* CHANGE color to text */
+.intro-heading,
+.intro-tagline {
+  color: #6c757d; /* Raven */
+  margin-bottom: 10px;
+}
+
+/* CHANGE font-size to text */
+.intro-tagline {
+  font-size: 20px;
+}
+
+/* CHANGE for responsive screen */
+.masthead .intro-text .intro-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 50px;
+  justify-content: center;
+}
+
+.header-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+  overflow: auto;
+}
+
+/* ----- Changes to Buttons ----- */
+/* ADD radius to buttons */
+
+.btn {
+  border-radius: 300px;
+}
+
+/* CHANGE color on button */
+.btn-success {
+   border: 1px solid #9b9797;
+   color: #fff;
+}
+.btn-warning {
+   border: 1px solid #9b9797;
+   color: #fff;
+}
+
+.disliked-button {
+  border: 1px solid #9b9797; 
+  color: #d9534f;
+  background-color:transparent;
+}
+
+.liked-button {
+  border: 1px solid #9b9797;
+  color: #93c54b;
+  background-color:transparent;
+}
+
+/* Change colour of rating num */
+.disliked_num,
+.liked_num {
+  color: black;  
+}
+
+/* Remove button shadow */
+.btn:focus {
+  box-shadow: none;
+}
+
+/* CHANGE color on button hover */
+.btn-success:hover {
+  border: 1px solid #9b9797; 
+  color: black;
+}  
+.btn-warning:hover {
+  border: 1px solid #9b9797; 
+  color: black;
+}
+
+.disliked-button:hover,
+.liked-button:hover {   
+  color: black;
+  border: 1px solid #9b9797; 
+  background-color:transparent;
+}
+
+
+
+/* ----- Changes to Models Section ----- */
+/* Change font size of h2 */
+.model-header {
+   font-size: 1.25rem; 
+}
+
+/* Add photo spacing left & border */
+#photo-left {
+    float: left;    
+    margin: 0 15px 0 0; /*(top,right,bottom,Left) */
+    border-radius: 10px;
+    padding: 0;
+}
+
+/* Add photo spacing right & border */
+#photo-right {
+    float: right;    
+    margin: 0 0 0 15px; /*(top,right,bottom,Left) */
+    border-radius: 10px;
+    padding: 0;
+    
+}
+
+/* Add border radius to spec */
+#spit-spec {
+    border: 1px solid #000;
+    border-radius: 10px;   
+}
+
+/* Add border to photo */
+.product-image {
+    border: 1px solid #000;
+}
+
+
+
+/* ----- Changes to Cards ----- */
+/* ADD border to Card */
+.card {
+   border-radius: 0.50rem; 
+   border: 1px solid #6c757d;
+}
+
+/* ADD border to first card in card-group */
+.card-group > .card:first-child {
+     border-radius: 0.50rem;
+     border: 1.5px solid #6c757d;
+}
+  
+/* ADD border to not first or las card in card-group */  
+.card-group > .card:not(:first-child):not(:last-child):not(:only-child) {
+    border-radius: 0.50rem;
+    border: 1.5px solid #6c757d;
+}  
+  
+/* ADD border to last card in card-group */  
+.card-group > .card:last-child {
+    border-radius: 0.50rem;
+    border: 1.5px solid #6c757d;
+}  
+
+/* Change padding for Card-body */
+.card-body {
+    padding:10px;
+}
+
+/* Change border for Parts cards*/  
+.parts-cards {
+    border: 1.5px solid #9b9797;
+    border-radius: 10px;
+}
+
+/* Add Shadow for Card hover */
+.card:hover {
+  box-shadow: 10px 10px 5px 0px rgba(61,90,128,0.64); 
+}
+
+/* CHANGE color for Card link */
+.card-link:hover {
+  color: #ee6c4d; 
+  text-decoration: none;
+}
+
+/* CHANGE font size for Card title */
+.card-title {
+  color: #ee6c4d; 
+  font-size: 1.5em;
+}
+
+/* ADD padding for Card footer */
+.card-footer {
+  padding: 0.75rem 0.75rem;
+}
+
+/* ADD border for Card footer */
+.card-footer:last-child {
+  border-radius: 0 0 10px 10px ;
+}
+
+/* ADD border & color for Card header */
+.card-header {
+  border-left: 1px solid #9b9797;
+  border-right: 1px solid #9b9797;
+  background-color: #ddd; 
+  padding: 0;
+}
+
+/* Add border to parts diagram */
+.parts-diagram {
+    border: 1px solid #9b9797;
+    border-radius: 10px;  
+}
+
+
+
+
+/* ----- Changes to cart.html ----- */
+/* Add font-size to cart totals */
+.cart-total {
+    font-size: 22px;
+}
+
+/* Add padding to qty box */
+.input-group, 
+.form-control {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* CHANGE Paragraphs for Card text */ 
+p.card-text {
+     margin :10px;
+     line-height: 15px;
+}
+
+/* CHANGE colour basket msg */
+.basket-msg {
+     color: #b22222;  /*firebrick*/ 
+}
+
+
+
+/* ----- Changes to Back To Top Button ----- */
+/* Back to top button */
+.bttop {
+    width: 65px;
+    background: #ee6c4d;
+    position: fixed;
+    right: -9px;
+    bottom: 33px;
+    z-index: 9998;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+/* Back to top button hover */
+.bttop:hover {
+    background: #ee6c4d;
+    box-shadow: 5px 10px 25px #555;
+}
+
+.bttop i {
+    color: #ffffffd4;
+    font-size: 35px;
+    padding: 7px;
+}
+  
+/* Back to top button icon hover */
+.bttop i:hover {
+    color: #fff;
+}
+
+
+
+/* ----- Changes to Footer ----- */
+/* Push Footer to bottom of page */
+.footer-bottom {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   padding: 0;
+}
+
+/* Change color of links */
+.footer-link, 
+.footer-link:hover {
+    color: #ee6c4d;
+    text-decoration: none;
+}
+
+/* Change color */
+.href-link {
+	color: #b22222; 
+	text-decoration: none;
+}
+
+.href-link:hover {
+	color: red; 
+	text-decoration: none;
+}
+
+
+/* ----- Changes to checkout.html ----- */
+/* Change font-size , paddig of legend */
+legend {
+	font-size: 25px;
+	padding: 15px 0 15px 0;
+	text-align: center;
+}
+
+/* Change color to card errors */
+.card-errors {
+    font-size: 18px;
+    color: #ee6c4d;
+    font-weight: bold;
+}
+
+/* Add styling to payment section */
+fieldset {
+	border: 1.5px solid #9b9797;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #98c1d9; 
+}
+
+.stripe-container {
+    padding-top: 25px;
+}
+
+/* Add darker border */
+.form-control {
+	border: 1px solid #9b9797;
+}
+
+
+
+/* ----- Changes to contact.html ----- */
+/* Change colour to  messages */
+.error-msg {
+    color: #b22222;  /*firebrick*/
+}
+
+.req-field {
+    color: #b22222;  /*firebrick*/
+}
+
+.contact-card {
+    background-color: #98c1d9; /* pale cerulean */
+	margin-bottom: 50px;
+}
+
+.first-one {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* ----- Changes to about.html ----- */
+/* Change font-size to heading */
+.about-heading {
+    font-size: 20px;
+}
+
+/* Center text */
+.center {
+    padding: 10% 0;
+}
+
+/* ----- Changes to form error messages ----- */
+/* Add new line after each message */
+.error-msg:after {
+    content: '\A';
+    white-space: pre;
+}
